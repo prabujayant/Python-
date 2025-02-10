@@ -6,17 +6,20 @@ class Solution:
 
         l=0
         r=t-1
-
+        
         while l<=r:
-            mid = l+(r-l)//2
-            if mid==target:
+            m = l+(r-l)//2
+            i=m//n
+            j=m%n
+            mid_num=matrix[i][j]
+            if mid_num==target:
                 return True
 
-            elif mid < target:
-                l=mid+1
+            elif mid_num < target:
+                l=m+1
 
             else:
-                r=mid-1
+                r=m-1
 
         return False
 
